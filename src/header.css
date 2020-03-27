@@ -1,0 +1,193 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue",sans-serif;
+    font-weight: lighter;
+}
+.wrapper {
+    background: black;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url('/img/wallpaper.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    -webkit-animation: imgcover1 2s;
+    z-index: 3000;
+}
+
+.witch header {
+    background: url('/img/queen.png') no-repeat 50% 50%;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    -webkit-animation: imgcover2 2s;
+}
+
+@-webkit-keyframes imgcover1{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-webkit-keyframes imgcover2{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+.content {
+    width: 94%;
+    margin: 4em auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.logo {
+    line-height: 60px;
+    position: fixed;
+    float: left;
+    margin: 16px 46px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.logo img {
+    width: 5vw;
+    cursor: url("/img/cursor.cur"), auto;
+}
+
+.witch .logo img {
+    transform: rotateY(180deg);
+    filter: invert(100%);
+    cursor: url("/img/spellbooks.cur"), auto;
+}
+
+.logo p, .witch .logo img:hover~p:nth-of-type(1){
+    opacity: 0;
+}
+
+.logo img:hover~p:nth-of-type(1){
+    opacity: 1;
+}
+
+.witch .logo img:hover~p:nth-of-type(2){
+    opacity: 1;
+    color: white;
+    position: relative;
+    left: -275px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+    z-index: 500000;
+}
+
+nav ul {
+    line-height: 60px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+    transition: 1s;
+}
+
+ nav.black ul{
+    background: white;
+     z-index: 3000;
+}
+
+.witch nav.black ul {
+     background: #000;
+ }
+
+nav ul li {
+    display: inline-block;
+    padding: 16px 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.witch nav ul li a {
+    color: #fff;
+}
+
+.witch .human {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.menu-icon {
+    line-height: 60px;
+    width: 100%;
+    background: white;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: black;
+    display: none;
+}
+
+.witch .menu-icon{
+    background: black;
+    color: white;
+}
+
+@media(max-width: 786px) {
+
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+
+    .logo img {
+        width: 10vw;
+    }
+
+    nav ul {
+        max-height: 0px;
+        background: #000;
+    }
+
+    nav.black ul {
+        background: #000;
+    }
+
+    .showing {
+        max-height: 34em;
+    }
+
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+}

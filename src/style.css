@@ -1,0 +1,49 @@
+body {
+    background: black;
+}
+
+
+
+#me {
+    height: 30vh;
+}
+
+#school, #witchSchool{
+    height: auto;
+    margin: 2vw;
+    background-color: black;
+}
+
+#forest {
+    background-image: url("/img/fond_witch.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+
+#contact, #witchContact {
+    background: #1B0C23;
+    margin-bottom: 2vh;
+}
+
+#contact>div>div>div,fieldset .col-lg-12, #witchContact>div>div>div,fieldset .col-lg-12,.contactform  {
+  position: inherit !important;
+}
+
+
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+#contact img, #witchContact img{
+    width: 30vw;
+}
+
+.paddingRequired{
+    margin-bottom: 1vh;
+}
+
